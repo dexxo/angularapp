@@ -4,9 +4,10 @@
       .module('app')
       .controller('AboutController', AboutController);
 
-  function AboutController () {
-    var vm = this;
-    vm.message = 'This is About Page!!!';
+  AboutController.$inject = ['$scope'];
+
+  function AboutController ($scope) {
+    $scope.message = 'This is About Page!!!';
   }
 
 }(window.angular));
