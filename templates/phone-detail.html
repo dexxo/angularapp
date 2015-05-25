@@ -1,0 +1,32 @@
+<img ng-src="{{phone.images[0]}}" class="phone">
+
+<h1>{{phone.name}}</h1>
+
+<p>{{phone.description}}</p>
+
+<ul class="phone-thumbs">
+  <li ng-repeat="img in phone.images">
+    <img ng-src="{{img}}">
+  </li>
+</ul>
+
+<ul class="specs">
+  <li>
+    <span>Android</span>
+    <dl>
+      <dt>os: {{phone.android.os}}</dt>
+      <dd>ui: {{phone.android.ui}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Storage</span>
+    <dl>
+      <dt>ram: {{phone.storage.ram}}</dt>
+      <dd>flash: {{phone.android.flash}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Additional Features</span>
+    <dd>{{phone.additionalFeatures}}</dd>
+  </li>
+</ul>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html ng-app='app'>
+  <head >
+    <meta charset="utf-8">
+    <title>angular test app</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  </head>
+  <body>
+    <!-- HEADER AND NAVBAR -->
+    <header>
+        <nav class="navbar navbar-default">
+        <div class="container">
+
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#/">Angular Test App</a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#/"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="#store"><i class="fa fa-shopping-cart"></i> store</a></li>
+                <li><a href="#phones"><i class="fa fa-phone-square"></i> phones</a></li>
+                <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
+            </ul>
+
+        </div>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT AND INJECTED VIEWS -->
+    <div id="main">
+
+        <!-- angular templating -->
+        <!-- this is where content will be injected -->
+        <div ng-view></div>
+    </div>
+
+    <script src="/js/vendor/angular.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/vendor/angular-route.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/vendor/angular-animate.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/app.module.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/modules/phones.module.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/services/product.service.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/services/phone.service.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/models/home.model.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/controllers/home.controller.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/controllers/store.controller.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/controllers/review.controller.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/controllers/about.controller.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/controllers/phones.controller.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/controllers/phone-detail.controller.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/modules/products.module.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/components/product-title.directive.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/components/product-panels.directive.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/components/product-gallery.directive.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/app.routes.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>
