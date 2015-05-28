@@ -11,16 +11,18 @@
       </select>
 
     </div>
-    <div class="col-md-10">
+    <div>
       <!--Body content-->
 
-      <ul class="phones">
-        <li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
-          <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
-          <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
-          <p>{{phone.snippet}}</p>
-        </li>
-      </ul>
+      <div class="ui list">
+        <div class="item" ng-repeat="phone in phones | filter:query | orderBy:orderProp">
+          <img class="ui avatar image" ng-src="{{phone.imageUrl}}">
+          <div class="content">
+            <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
+            <p>{{phone.snippet}}</p>
+          </div>
+        </div>
+      </div>
 
     </div>
   </div>

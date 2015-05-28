@@ -1,7 +1,5 @@
-<div class="container">
-  <ul class="row list-group">
-    <li class="col-md-4 col-lg-4 list-group-item" ng-repeat="product in store.products">
-
+<section class="ui grid">
+  <div class="five wide column" ng-repeat="product in store.products">
       <!-- attribute directive -->
       <h3 product-title></h3>
 
@@ -10,7 +8,5 @@
 
       <!-- element directive -->
       <product-panels></product-panels>
-
-    </li>
-  </ul>
-</div>
+  </div>
+</section>
