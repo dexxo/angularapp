@@ -11,20 +11,21 @@
     $scope.query = '';
     $scope.orderProp = 'age';
 
-    setPhones();
-
-    function setPhones () {
-      return requestPhones().then(function () {
-        $log.info('setting phones..');
-      });
-    }
-
-    function requestPhones () {
+    $scope.requestPhones = function () {
       return phoneService.getPhones().then(function (data) {
         $scope.phones = data;
         return $scope.phones;
       });
-    }
+    };
+
+    $scope.setPhones = function () {
+      return $scope.requestPhones().then(function () {
+        $log.info('setting phones..');
+      });
+    };
+
+    $scope.setPhones();
+
   }
 
 }(window.angular));

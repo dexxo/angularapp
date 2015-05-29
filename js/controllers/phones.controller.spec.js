@@ -1,6 +1,6 @@
-describe('Unit: HomeController', function() {
+describe('Unit: PhonesController', function() {
   // Load the module with MainController
-  beforeEach(module('app'));
+  beforeEach(module('phones-cat'));
 
   var ctrl, scope;
 
@@ -9,14 +9,20 @@ describe('Unit: HomeController', function() {
   beforeEach(inject(function($controller, $rootScope) {
     scope = $rootScope.$new();
     // Create the controller
-    ctrl = $controller('HomeController', {
+    ctrl = $controller('PhonesController', {
       $scope: scope
     });
   }));
 
-  it('should $scope.message be iquals to Hola Mundo',
-    function() {
-      expect(scope.message).toEqual('Hola Mundo');
+  /*
+  it('$scope.phones shoud have a json object', function() {
+    var phones = [];
+
+    expect(scope.phones).toEqual(phones);
+    scope.setPhones();
+
   });
+   */
+
 
 });

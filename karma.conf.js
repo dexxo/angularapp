@@ -10,6 +10,8 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'vendor/angular.min.js',
+      'vendor/angular-route.min.js',
+      'vendor/angular-mocks.js',
       'app.module.js',
       'modules/*.module.js',
       'services/*.service.js',
