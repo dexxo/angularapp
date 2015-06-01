@@ -1,28 +1,24 @@
 describe('Unit: PhonesController', function() {
-  // Load the module with MainController
-  beforeEach(module('phones-cat'));
+  var ctrl, scope, pService;
 
-  var ctrl, scope;
+  beforeEach(module('phones-cat'));
 
   // inject the $controller and $rootScope services
   // in the beforeEach block
-  beforeEach(inject(function($controller, $rootScope) {
+  beforeEach(inject(function($controller, $rootScope, phoneService) {
     scope = $rootScope.$new();
+    rootScope = $rootScope;
     // Create the controller
     ctrl = $controller('PhonesController', {
-      $scope: scope
+      $scope: scope,
+      $rootScope: rootScope
     });
   }));
 
-  /*
-  it('$scope.phones shoud have a json object', function() {
-    var phones = [];
 
-    expect(scope.phones).toEqual(phones);
-    scope.setPhones();
+  it('$scope.phones shoud have a json object', function() {
 
   });
-   */
 
 
 });

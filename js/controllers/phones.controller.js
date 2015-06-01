@@ -19,8 +19,8 @@
     };
 
     $scope.setPhones = function () {
-      return $scope.requestPhones().then(function () {
-        $log.info('setting phones..');
+      return $scope.requestPhones().then(function (data) {
+        $log.info('setting phones... ' + JSON.stringify(data));
       });
     };
 

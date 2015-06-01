@@ -5,12 +5,14 @@
       .module('app')
       .controller('ReviewController', ReviewController);
 
-  function ReviewController () {
-    var vm = this;
-    vm.review = {};
-    vm.addReview = function (product) {
-      product.reviews.push(vm.review);
-      vm.review = {};
+  ReviewController.$inject = ['$scope'];
+
+  function ReviewController ($scope) {
+    $scope.review = {};
+
+    $scope.addReview = function (product) {
+      product.reviews.push($scope.review);
+      $scope.review = {};
     };
   }
 

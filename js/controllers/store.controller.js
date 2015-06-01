@@ -14,8 +14,8 @@
     setProducts();
 
     function setProducts () {
-      return requestProducts().then(function(){
-        $log.info('setting products...');
+      return requestProducts().then(function(data){
+        $log.info('setting products... '+ JSON.stringify(data));
       });
     }
 
