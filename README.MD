@@ -1,2 +1,2 @@
-ANGULA TEST APP
-===============
+ANGULAR TEST APP
+================

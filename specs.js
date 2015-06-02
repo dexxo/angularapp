@@ -1,4 +1,18 @@
-describe('PhoneCat App', function() {
+describe('App', function() {
+
+  describe('Home view', function() {
+
+    beforeEach(function() {
+      browser.get('http://localhost:8000/#/');
+    });
+
+
+    it('On home page should apper the word Hola Mundo', function() {
+      var paragraph = element(by.css('.jumbotron p'));
+      expect(paragraph.getText()).toEqual('Hola Mundo');
+    });
+
+  });
 
   describe('Phone list view', function() {
 
@@ -21,6 +35,8 @@ describe('PhoneCat App', function() {
       query.sendKeys('m');
       expect(phoneList.count()).toBe(3);
     });
+
   });
+
 
 });
